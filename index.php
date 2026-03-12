@@ -1,3 +1,5 @@
+<?php include("config.php"); ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -8,7 +10,7 @@
   </head>
   <body>
     <!-- Menüü -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,13 +45,23 @@
       </form>
     </div>
     </div>
-</nav>
+  </nav>
     <!-- /Menüü -->
+
     <!-- Sisu -->
     <div class="container">
+    <?php
+    $paring = "SELECT * FROM cars LIMIT 8";
+    $valjund = mysqli_query($yhendus, $paring); // mysql käsu saatmine andmebaasile
+
+    while($rida = mysqli_fetch_row($valjund)){
+      var_dump($rida[1],$rida[2]);
+    }
+    ?>
+
     <div class="row row-cols-1 row-cols-md-4 g-4">
 
-  <div class="col">
+    <div class="col">
     <div class="card h-100">
       <img src="https://loremflickr.com/400/250/audi" class="card-img-top" alt="audi">
       <div class="card-body">
@@ -57,11 +69,11 @@
         <p>2010</p>
         <p>Mootor:v8</p>
         <p>Kütus: bensiin</p>
-        <p>Hind: 150€/paev</p>
+        <p>Hind: 150€/päev</p>
         <a href="single_car.php" class="btn btn-dark w-100">Rendi</a>
       </div>
       </div>
-</div>
+  </div>
 
   </div>
     <!-- /Sisu -->
