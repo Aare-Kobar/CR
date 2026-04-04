@@ -27,7 +27,7 @@ sudo apt install mysql-server -y
 <img width="867" height="53" alt="Screenshot 2026-04-04 at 13 01 32" src="https://github.com/user-attachments/assets/8ff19bde-d5e2-49b9-a993-c0ea790109df" />
 
 
-Kontrollisin teenuse staatust:
+Teenuse staatuse kontrollimine:
 
 ```bash
 sudo systemctl status mysql.service
@@ -52,7 +52,7 @@ Root kasutaja kaugelt sisselogimise keelamine:
 
 ## Kasutaja autentimine
 
-MYSQL paigaldamisel ei küsitud autentimise valikut, kuna Ubuntu MYSQL paigaldus seadistab root kasutaja vaikimisi auth_socket peale.
+MYSQL paigaldamisel ei küsitud autentimise valikut, kuna Ubuntu MYSQL paigaldus seadistab root kasutaja vaikimisi `auth_socket` peale.
 
 MYSQL kasutajate autentimise kontrollimine:
 
@@ -71,14 +71,17 @@ MYSQL konfiguratsioonifaili muutmine:
 ```bash
 sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 ```
-Lisatud / kontrollitud seaded:
-<img width="630" height="106" alt="Screenshot 2026-04-04 at 16 08 29" src="https://github.com/user-attachments/assets/94edd493-a184-4199-b12c-5b0076088659" />
 
-* bind-address = 127.0.0.1 - MYSQL kuulab ainult lokaalseid ühendusi 
-* local-infile = 0 - Keelab failide importimise serverist
-* skip-name-resolve - Kasutab IP-aadresse hostinimede asemel 
-
-Peale konfiguratsiooni faili salvestamist teha teenuse restart:
+Kontrollida et `bind-address` oleks `127.0.0.1`:
+```bash
+bind-address = 127.0.0.1 #MYSQL kuulab ainult lokaalseid ühendusi
+```
+Lisada juurde:
+```bash
+local-infile = 0 - #Keelab failide importimise serverist
+skip-name-resolve - #Kasutab IP-aadresse hostinimede asemel 
+```
+Peale konfiguratsiooni faili salvestamist teha teenusele restart:
 ```bash
 sudo systemctl restart mysql
 ```
@@ -94,13 +97,13 @@ CREATE DATABASE andmebaas;
 
 ## GitHubist andmebaasi importimine
 
-Logisin GitHubi sisse:
+Logi GitHubi sisse:
 
 ```bash
 gh auth login
 ```
 
-Kloonisn oma GitHub repository:
+Klooni oma GitHub repository:
 
 ```bash
 git clone https://github.com/Aare-Kobar/CR.git
