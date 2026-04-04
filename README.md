@@ -88,6 +88,7 @@ USE andmebaas;
 SHOW TABLES;
 ```
 <img width="714" height="298" alt="Screenshot 2026-04-04 at 12 03 35" src="https://github.com/user-attachments/assets/53bacdd2-dc30-480b-9c20-aec362cdbf99" />
+
 Port 3306 avatud:
 <img width="1272" height="99" alt="Screenshot 2026-04-04 at 13 18 33" src="https://github.com/user-attachments/assets/b0379501-d47a-40b0-bebc-efd09b0c9994" />
 
