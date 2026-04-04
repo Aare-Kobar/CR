@@ -26,13 +26,20 @@ sudo apt install mysql-server -y
 ```
 <img width="867" height="53" alt="Screenshot 2026-04-04 at 13 01 32" src="https://github.com/user-attachments/assets/8ff19bde-d5e2-49b9-a993-c0ea790109df" />
 
-
 Teenuse staatuse kontrollimine:
 
 ```bash
 sudo systemctl status mysql.service
 ```
 <img width="1280" height="370" alt="Screenshot 2026-04-04 at 12 15 56" src="https://github.com/user-attachments/assets/d5b1f475-7604-414a-a45a-4c74ec87e25a" />
+
+Kontrollida kas teenus käivitub automaatselt:
+
+```bash
+systemctl is-enabled mysql #Peaks tulemuseks andma "enabled"
+```
+<img width="761" height="54" alt="Screenshot 2026-04-04 at 17 20 00" src="https://github.com/user-attachments/assets/c2ef6d80-4864-4d86-af13-ca3ae53fe09e" />
+
 
 ---
 
