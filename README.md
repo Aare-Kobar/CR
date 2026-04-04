@@ -71,13 +71,14 @@ MYSQL konfiguratsioonifaili muutmine:
 ```bash
 sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 ```
+Lisatud / kontrollitud seaded:
 <img width="630" height="106" alt="Screenshot 2026-04-04 at 16 08 29" src="https://github.com/user-attachments/assets/94edd493-a184-4199-b12c-5b0076088659" />
 
 * bind-address = 127.0.0.1 - MYSQL kuulab ainult lokaalseid ühendusi 
 * local-infile = 0 - Keelab failide importimise serverist
 * skip-name-resolve - Kasutab IP-aadresse hostinimede asemel 
 
-Peale konfiguratsiooni faili salvestamist teha restart:
+Peale konfiguratsiooni faili salvestamist teha teenuse restart:
 ```bash
 sudo systemctl restart mysql
 ```
