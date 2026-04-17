@@ -1,5 +1,7 @@
 <a href = "javascript:history.back()">Back to previous page</a>
 <?php
+    include("config.php");
+
     if (!empty($_GET)) {
         $mark = $_GET['mark'];
         $model = $_GET['model'];
@@ -8,9 +10,14 @@
         $price = $_GET['price'];
         $image = $_GET['image'];
 
-        $paring = "INSERT INTO cars ( id, mark, model, engine, fuel, price, image) VALUES (NULL, 'Ford', 'Galaxy', '1.9TDI', 'diisel', '200', 'ford.jpg')";
+        $paring = "INSERT INTO cars (mark, model, engine, fuel, price, image) 
+        VALUES ('".$mark."', '".$model."', '".$engine."', '".$fuel."', '".$price."', '".$image."')";
 
-
+        $valjund = mysqli_query($yhendus, $paring);
+        $tulemus = mysqli_affected_rows($yhendus);
+        if ($tulemus == 1) {
+            header("Location:admin.php");
+        }
     }
 ?>
 
