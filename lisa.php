@@ -6,7 +6,7 @@
         $mark = $_GET['mark'];
         $model = $_GET['model'];
         $engine = $_GET['engine'];
-        $fuel = $_GET['mark'];
+        $fuel = $_GET['fuel'];
         $price = $_GET['price'];
         $image = $_GET['image'];
 
