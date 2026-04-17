@@ -1,5 +1,5 @@
-<h1>admin</h1>
-
+<h1><a href='index.php'>admin</h1>
+<a href="lisa.php">+ Lisa auto</a><br>
 
 <table border="!">
     <tr>
