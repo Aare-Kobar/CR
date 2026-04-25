@@ -40,23 +40,23 @@ if (!isset($_SESSION['admin'])) {
     </div>
   </nav>
 
-<!-- Lisa auto nupp -->
+
 <div class="container mt-4">
   <div class="d-flex justify-content-end mb-3">
     <a href="lisa.php" class="btn btn-success">+ Lisa auto</a>
   </div>
 
-<table class="table table-striped">
-    <tr>
-        <td>Mark</td>
-        <td>Model</td>
-        <td>Engine</td>
-        <td>Fuel</td>
-        <td>Price</td>
-        <td>Image</td>
-        <td>Kustuta</td>
-        <td>Muuda</td>
-    </tr>
+  <table class="table table-striped">
+      <tr>
+          <td>Mark</td>
+          <td>Model</td>
+          <td>Engine</td>
+          <td>Fuel</td>
+          <td>Price</td>
+          <td>Image</td>
+          <td>Kustuta</td>
+          <td>Muuda</td>
+      </tr>
 
 
 <?php
@@ -84,6 +84,7 @@ if (!isset($_SESSION['admin'])) {
 ?>
 </table>
 </div>
+
 <div class="container mt-4">
     <div class="d-flex justify-content-end">
         <a href="logout.php" class="btn btn-danger">Logi välja</a>
