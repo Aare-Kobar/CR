@@ -1,4 +1,3 @@
-<a href = "javascript:history.back()">Back to previous page</a>
 <?php
     include("config.php");
 
@@ -21,13 +20,33 @@
     }
 ?>
 
-<form action="lisa.php" method="get">
-    Mark <input type="text" name="mark" value="ford"><br>
-    Model <input type="text" name="model" value="focus"><br>
-    Engine <input type="text" name="engine" value="v8"><br>
-    Fuel <input type="text" name="fuel" value="bensiin"><br>
-    Price <input type="text" name="price" value="100"><br>
-    Image <input type="text" name="image" value="ford.jpg"><br>
-    <input type="submit" value="Lisa auto"><br>
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lisa auto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
 
-</form>
+<div class="container mt-5" style="max-width: 600px;">
+    <h2 class="mb-4">Lisa uus auto</h2>
+    <form action="lisa.php" method="get" class="card p-4 shadow">
+        <input type="text" name="mark" class="form-control mb-3" placeholder="Mark" value="ford" required>
+        <input type="text" name="model" class="form-control mb-3" placeholder="Model" value="focus" required>
+        <input type="text" name="engine" class="form-control mb-3" placeholder="Engine" value="v8" required>
+        <input type="text" name="fuel" class="form-control mb-3" placeholder="Fuel" value="bensiin" required>
+        <input type="text" name="price" class="form-control mb-3" placeholder="Price" value="100" required>
+        <input type="text" name="image" class="form-control mb-3" placeholder="Image" value="ford.jpg">
+        <button type="submit" class="btn btn-dark">
+            Lisa auto
+        </button>
+        <a href="admin.php" class="btn btn-secondary mt-3">
+            ← Tagasi
+        </a>
+    </form>
+</div>
+
+</body>
+</html>

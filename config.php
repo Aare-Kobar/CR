@@ -1,7 +1,7 @@
 <?php
 // ***protseduuriline***
 // sinu andmed
-$db_server = 'localhost';
+$db_server = 'db';
 $db_andmebaas = 'cr';
 $db_kasutaja = 'aare';
 $db_salasona = 'aare';

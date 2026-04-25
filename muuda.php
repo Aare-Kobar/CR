@@ -1,4 +1,3 @@
-<a href = "javascript:history.back()">Back to previous page</a><br>
 <?php
     include("config.php");
 
@@ -7,7 +6,7 @@
         $mark = $_GET['mark'];
         $model = $_GET['model'];
         $engine = $_GET['engine'];
-        $fuel = $_GET['mark'];
+        $fuel = $_GET['fuel'];
         $price = $_GET['price'];
         $image = $_GET['image'];
 
@@ -43,3 +42,4 @@
     <input type="submit" value="Salvesta auto"><br>
 
 </form>
+<a href = "admin.php">←Tagasi</a><br>
