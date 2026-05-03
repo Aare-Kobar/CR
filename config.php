@@ -6,6 +6,9 @@ $db_andmebaas = 'cr';
 $db_kasutaja = 'aare';
 $db_salasona = 'aare';
 
+define('ADMIN_USERNAME', 'admin');
+define('ADMIN_PASSWORD_HASH', '$2b$12$0FTDh.QuAUZACF4xGfgkauYlIsXbXXh7oJf.WrwRerGhAGuy89ooS');
+
 // ühendus andmebaasiga
 $yhendus = mysqli_connect($db_server, $db_kasutaja, $db_salasona, $db_andmebaas);
 

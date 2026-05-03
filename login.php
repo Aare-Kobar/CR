@@ -1,5 +1,6 @@
 <?php
 session_start();
+include('config.php');
 
 $error = "";
 
@@ -7,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    if ($username == "admin" && $password == "admin") {
+    if ($username === ADMIN_USERNAME && password_verify($password, ADMIN_PASSWORD_HASH)) {
         $_SESSION["admin"] = true;
         header("Location: admin.php");
         exit();
